@@ -1,5 +1,40 @@
 
 //fun main(){
+//    for (i in 1..10){
+//        if (i == 5) continue
+//        println(i * i)
+//    }
+//}
+
+
+//fun main(){
+//    print("Введи цифру - ")
+//    val num = readln().toInt()
+//
+//    when (num){
+//        1 -> println("Понедельник")
+//        2 -> println("Вторник")
+//        3 -> println("Среда")
+//        4 -> println("Четверг")
+//        5 -> println("Пятница")
+//        6 -> println("Суббота")
+//        7 -> println("Воскресенье")
+//        else -> println("В неделе 7 дней")
+//    }
+//}
+
+//fun main(){
+//    print("Введите цифру - ")
+//    val number = readln().toInt()
+//
+//    if (number % 2 == 0) {
+//        println("Четное")
+//    } else {
+//        println("Нечетное")
+//    }
+//}
+
+//fun main(){
 //    print("Введи слово: ")
 //    val word = readln()
 //
