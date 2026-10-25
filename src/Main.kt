@@ -1,4 +1,38 @@
 
+fun main(){
+    val a = intArrayOf(5, 8, 2, 9, 4)
+
+    for (i in a.indices){
+        print("$i: ${a[i]} ")
+    }
+
+    a[4] = 100
+
+    println("\n${a.contentToString()}")
+
+    var i = 0
+    var sum = 0
+    var maxNumInArray: Int = a[0]
+
+    while (i <= a.size - 1){
+        sum += a[i]
+
+        if (maxNumInArray < a[i]){
+            maxNumInArray = a[i]
+        }
+
+        i++
+    }
+
+    for (j in a.size - 1 downTo 0) print ("${a[j]} ")
+    println()
+    for (h in 0..a.size - 1 step 2) print ("${a[h]} ")
+    println()
+    println(maxNumInArray)
+
+    println(sum)
+}
+
 //fun main(){
 //    for (i in 1..10){
 //        if (i == 5) continue
