@@ -1,37 +1,121 @@
 
 fun main(){
-    val a = intArrayOf(5, 8, 2, 9, 4)
+    val a = intArrayOf(3, 7, 1, 9, 4, 6, 4, 3, 4,5 ,6)
+    val b = IntArray(a.size)
+    val numForSearch: Int = readln().toInt()
+    var counter = 0
 
-    for (i in a.indices){
-        print("$i: ${a[i]} ")
+    var numArray = a[0]
+    var sizeArray = a.size - 1
+    var i = 0
+
+
+    for (p in 0..a.size - 1){
+        b[p] = a[a.size - p - 1]
     }
 
-    a[4] = 100
-
-    println("\n${a.contentToString()}")
-
-    var i = 0
-    var sum = 0
-    var maxNumInArray: Int = a[0]
-
-    while (i <= a.size - 1){
-        sum += a[i]
-
-        if (maxNumInArray < a[i]){
-            maxNumInArray = a[i]
+    for (j in a.indices){
+        if (a[j] == numForSearch) {
+            println(j)
+            break
         }
+        if (a[j] != numForSearch){
+            counter++
+        }
+    }
 
+    while (i < a.size / 2)  {
+        numArray = a[i]
+
+        a[i] = a[sizeArray]
+
+        a[sizeArray] = numArray
+
+        sizeArray -= 1
         i++
     }
 
-    for (j in a.size - 1 downTo 0) print ("${a[j]} ")
-    println()
-    for (h in 0..a.size - 1 step 2) print ("${a[h]} ")
-    println()
-    println(maxNumInArray)
+    if (counter == a.size){
+        println("-1")
+    }
 
-    println(sum)
+    println(b.contentToString())
+
+    print(a.contentToString())
 }
+
+//fun main(){
+//    val a = intArrayOf(3, 7, 1, 9, 4, 6)
+//    val b = IntArray(a.size)
+//
+//    var minNum: Int = a[0]
+//    var indexForMinNum: Int = 0
+//    var countNumUp5 = 0
+//    var middleNum: Double = 0.0
+//
+//    for (i in a.indices){
+//        if (a[i] < minNum){
+//            minNum = a[i]
+//            indexForMinNum = i
+//        }
+//
+//
+//        if (a[i] > 5) countNumUp5 += 1
+//
+//        middleNum += a[i]
+//    }
+//
+//    var numForReverse: Int = 0
+//
+//    for (j in a.size - 1 downTo 0 ){
+//
+//        b[numForReverse] = a[j]
+//
+//        numForReverse += 1
+//    }
+//
+//    middleNum /= a.size
+//
+//    println("$minNum - минимальное число, его индекс - $indexForMinNum")
+//    println(countNumUp5)
+//    println(middleNum)
+//    println(a.contentToString())
+//    println(b.contentToString())
+//}
+
+//fun main(){
+//    val a = intArrayOf(5, 8, 2, 9, 4)
+//
+//    for (i in a.indices){
+//        print("$i: ${a[i]} ")
+//    }
+//
+//    a[4] = 100
+//
+//    println("\n${a.contentToString()}")
+//
+//    var i = 0
+//    var sum = 0
+//    var maxNumInArray: Int = a[0]
+//
+//    while (i <= a.size - 1){
+//        sum += a[i]
+//
+//        if (maxNumInArray < a[i]){
+//            maxNumInArray = a[i]
+//        }
+//
+//        i++
+//    }
+//
+//    for (j in a.size - 1 downTo 0) print ("${a[j]} ")
+//    println()
+//    for (h in 0..a.size - 1 step 2) print ("${a[h]} ")
+//    println()
+//    println(maxNumInArray)
+//
+//    println(sum)
+//}
 
 //fun main(){
 //    for (i in 1..10){
